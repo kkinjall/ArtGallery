@@ -1,0 +1,16 @@
+Program Developer: Kinjal Kamboj
+Purpose of the program: This program acts as a social site where a user can register an account, log in, like artworks, follow artists, add artworks and receive notifications
+similar to how they would in most social media accounts. 
+
+Compilation Instructions: 
+Unzip the folder and open it in VS Code or any text editor. Open the terminal and type the following commands followed by hitting Enter: "npm install express",
+“npm install express-session”, “npm install mongoose” and “npm install pug”. After installing these dependencies, to run the server type "node server.js". This will log to the
+terminal a link to the site’s URL that you can follow or copy and paste in any browser to interact with the webpage.
+
+Installing/Initializing Database and Server:
+Before the server should be run, make sure the dependencies for the program are installed by typing the commands: “npm install express”, “npm install express-session”, “npm install
+mongoose” and “npm install pug” into the terminal followed by hitting Enter. The database for this project is stored using mongoose and the initialization script is written in the
+database-initializer.js file. The code in the file first drops any existing users and gallery collection before importing all the artwork objects from the gallery.json file into the gallery collection. This
+implementation results in the database’s collections being dropped and imported again each time the server is restarted. The users collection will be empty each time the server begins and
+will only be populated every time a user registers for an account. The gallery collection will always contain at minimum 12 artwork objects added from the beginning. To start the server,
+type “node server.js” into the terminal.
