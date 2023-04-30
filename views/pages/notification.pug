@@ -1,0 +1,21 @@
+html
+ title Notifications 
+ include ../partials/header.pug
+
+ main 
+  body 
+   h4 Notifications from your Followed Artists 
+   h3 Artwork Added
+   each artist in artists 
+     a(href="http://localhost:3000/" + artist)
+        h4 Artist: #{artist}
+     each art in artwork[artist]
+       a(href="http://localhost:3000/" + art.name)
+         li #{art.name}
+   br
+   br
+   h3 Workshops Added 
+   each wshop in workshop 
+     li #{wshop}
+    
+    

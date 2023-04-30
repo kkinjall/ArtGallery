@@ -1,0 +1,57 @@
+html 
+ title Add Artwork
+ include ../partials/header.pug
+ script(src = "/client.js")
+
+ main 
+  body 
+   h4 Add Artwork to Gallery 
+   label Name:
+   |
+   |
+   |
+   input(type='text' id="artName" placeholder = "Type artwork's name...")
+   br
+   br
+   label Year: 
+   |
+   |
+   |
+   input(type='text' id="artYear" placeholder = "Type year created...")
+   br
+   br
+   label Category:
+   |
+   |
+   |
+   input(type='text' id="artCategory" placeholder = "Type artwork's category...")
+   br
+   br
+   label Medium: 
+   |
+   |
+   |
+   input(type='text' id="artMedium" placeholder = "Type artwork's medium...")
+   br
+   br
+   label Description
+   |
+   |
+   |
+   input(type='text' id="artDescription" placeholder = "Type artwork's description...")
+   br
+   br
+   label Image URL:
+   |
+   |
+   |
+   input(type='text' id="artImage" placeholder = "Type artwork's URL...")
+   br
+   br
+   input(type='button' value="Submit" onclick='addArtwork()')
+
+   
+   
+   
+   
+   

@@ -1,0 +1,18 @@
+html 
+ title Add Workshop 
+ include ../partials/header.pug
+ script(src = "/client.js")
+
+ main 
+  body 
+   h4 Add Workshop:
+   label Workshop Name:
+   |
+   |
+   |
+   input(type='text' id='workshopName' name='workshopName' placeholder = 'Workshop Name')
+   |
+   |
+   |
+   br
+   input(type='button' value="Add Workshop!" onclick='addWorkshop()')

@@ -1,0 +1,40 @@
+html 
+ head 
+  include ../partials/header.pug
+  title Search Page 
+  script(src = "/client.js")
+
+  main 
+   body 
+    h3 Search Artworks
+    br
+    label Artwork Name:
+    |
+    | 
+    |
+    input(type='text' id="artworkName" placeholder = "Type artwork's name...")
+    br
+    br
+    input(type='button' value="Search By Name" onclick='searchName()')
+    br
+    br
+    br
+    label Artist Name: 
+    |
+    |
+    |
+    input(type='text' id="artworkArtist" placeholder = "Type artwork's artist's name...")
+    br
+    br
+    input(type='button' value="Search By Artist" onclick='searchArtist()')
+    br
+    br
+    br
+    label Art Category:
+    |
+    |
+    |
+    input(type='text' id="artworkCat" placeholder = "Type artwork's category...")
+    br
+    br
+    input(type='button' value="Search by Category" onclick='searchCat()')

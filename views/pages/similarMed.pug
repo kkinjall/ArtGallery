@@ -1,0 +1,10 @@
+html 
+ title Results of Similar Mediums
+ include ../partials/header.pug
+
+ main 
+  body 
+   h4 Similar Search Results of Artworks with the medium of #{search}:
+   each art in artworks 
+     a(href="http://localhost:3000/" + art.name)
+       li #{art.name}

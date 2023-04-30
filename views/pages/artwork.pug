@@ -1,0 +1,32 @@
+html 
+ head 
+  include ../partials/header.pug
+  script(src = "/client.js")
+  title #{art.name}
+
+  main 
+   body 
+    img(src = art.image alt = art.description style = 'width:250px; height:250px;')
+    br
+    input(type='button' value="Like!" onclick="likeArtwork(\"" + art.name + "\")")
+    |
+    |
+    |
+    p #{art.likes}
+    br
+    input(type='text' id="review" placeholder = "Type review...")
+    |
+    |
+    |
+    input(type='button' value="Enter Review!" onclick='reviewArtwork(\'' + art.name + '\')')
+    
+    h4 #{art.name}
+    a(href = '/artist/' + art.artist)
+      h4 Artist: #{art.artist}
+    h4 Year: #{art.year} 
+    a(href = '/catResults/' + art.category)
+      h4 Category: #{art.category}
+    a(href = '/mediumResults/' + art.medium)
+      h4 Medium: #{art.medium} 
+    h4 Description: #{art.description}
+    br

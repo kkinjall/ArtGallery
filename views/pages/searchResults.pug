@@ -1,0 +1,13 @@
+html 
+ head 
+  include ../partials/header.pug
+  title Search Page 
+  script(src = "/client.js")
+
+  main 
+   body 
+    h3 Search Results for #{search}
+
+    each art in artworks 
+      a(href="http://localhost:3000/" + art.name)
+        li  #{art.name}

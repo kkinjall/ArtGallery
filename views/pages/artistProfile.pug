@@ -1,0 +1,23 @@
+html 
+ include ../partials/header.pug
+ title #{artistName}'s Profile
+ script(src = "/client.js")
+
+ body 
+  main 
+    h2 #{artistName}'s Profile
+
+    h4 List of Artworks: 
+    each art in artwork
+      a(href="http://localhost:3000/" + art.name)
+        li #{art.name}
+      img(src = art.image alt = art.description style ='width:250px; height:250px;')
+    br
+    h4 Workshops: 
+    each wshop in workshops 
+     li #{wshop} 
+     input(type='button' value="Enroll in Workshop" onclick='enrollWorkshop(\'' + artistName + "," + wshop + '\')')
+    
+    input(type='button' value="Follow Artist!" onclick='followArtist(\'' + artistName + '\')')
+
+    

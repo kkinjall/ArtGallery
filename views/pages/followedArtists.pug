@@ -1,0 +1,10 @@
+html 
+ title #{user}'s Followed Artists 
+ include ../partials/header.pug
+
+ main 
+  body 
+   h3 #{user}'s List of Followed Artists 
+   each art in artists 
+    a(href = '/artist/' + art.artist)
+      h4 #{art.artist}

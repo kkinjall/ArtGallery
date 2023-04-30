@@ -1,0 +1,21 @@
+html 
+  head 
+   script(src="/client.js")
+   link(rel='stylesheet', type='text/css', href='/login.css')
+   title Register Account
+
+  body 
+   main 
+     h1 Register 
+
+     div 
+      input(type='text' id='userName' name='userName' placeholder = 'User Name')
+    
+     div 
+      input(type='password' id='password' name='password' placeholder = 'Password')
+    
+     div
+      input(type='button' value="Register" onclick='checkRegister()')
+    
+     div
+       a(href='http://localhost:3000/login') Login Account

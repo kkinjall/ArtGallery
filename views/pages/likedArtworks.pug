@@ -1,0 +1,18 @@
+html 
+  title Liked/Reviewed Artworks 
+  include ../partials/header.pug
+
+  main 
+   body 
+    h3 Liked/Reviewed Artworks: 
+
+    each art in artworks
+        h4 #{art.name}
+        img(src = art.image alt = art.description style ='width:250px; height:250px;')
+        h5 Number of Likes: #{art.likes}
+        -if(art.likes > 0){
+            input(type='button' value="Remove Like" onclick="likeArtwork(\"" + art.name + "\")")
+        -}
+        each rev in art.reviews
+          li Review: #{rev} 
+          input(type='button' value="Remove Review" onclick="removeReview(\"" + art.name + "," + rev + "\")")

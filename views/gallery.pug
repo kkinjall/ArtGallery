@@ -1,0 +1,13 @@
+html 
+  head 
+   title Gallery
+   include ./partials/header.pug
+  
+  main
+    body
+      h1 Gallery 
+      each art in galleee
+        a(href="http://localhost:3000/" + art.name)
+          h2 #{art.name}
+        img(src = art.image alt = art.description style ='width:250px; height:250px;')
+        br
